@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Titanium Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 lg:p-8">
+<!-- Background Decoration -->
+<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+<div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-3xl"></div>
+</div>
+<div class="z-10 w-full max-w-md">
+<!-- Brand Identity -->
+<div class="flex flex-col items-center mb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="bg-primary p-2 rounded-lg text-white">
+<span class="material-symbols-outlined text-3xl">
+                            settings_input_component
+                        </span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Titanium Solutions</h1>
+</div>
+</div>
+<!-- Login Card -->
+<div class="bg-white dark:bg-slate-800 shadow-xl rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+<!-- Visual Header -->
+<div class="h-32 w-full bg-primary/10 relative overflow-hidden" data-alt="Abstract blue gradient geometric architectural pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFwmvgURyfGEZt7yrMndKZHGjzqDadAgqjflsuM8-Z4MoZ6eLMAZ-xr53EF_ispqMT9Hp_I3cyaq9w4KJFGj4niZoGJR0HyW3m8uArVzde03zMAYHlK5YiNNMrpuOCdPa9PrwPcUQFUU2BlbWcTPqAI1YKi9VYETtyGuCBEqW5pTaKwSQ5SmymO811-SxhJuoi9K8x6jxgPIe70lrXGz8OF91Rjo2daDEnSmSrZrzkhy7g5icQfA-wMhh9FeqIMIRQFB_GH2cX-3c'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-800 to-transparent"></div>
+</div>
+<div class="px-8 pb-10 pt-2">
+<div class="mb-8">
+<h2 class="text-3xl font-black text-slate-900 dark:text-white mb-2">Welcome back</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Enter your credentials to access your secure dashboard.</p>
+</div>
+<form class="space-y-5">
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="email">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">mail</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-900 dark:text-white" id="email" placeholder="name@titaniumsolutions.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300" for="password">Password</label>
+<a class="text-xs font-bold text-primary hover:underline transition-all" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">lock</span>
+<input class="w-full pl-12 pr-12 py-3.5 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-slate-900 dark:text-white" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 text-primary rounded border-slate-300 focus:ring-primary" id="remember" type="checkbox"/>
+<label class="text-sm text-slate-600 dark:text-slate-400 select-none" for="remember">Remember this device</label>
+</div>
+<!-- Sign In Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0 mt-4" type="submit">
+                            Sign In to Account
+                        </button>
+</form>
+<!-- Footer Links -->
+<div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-700 text-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm">
+                            Don't have an account yet? 
+                            <a class="text-primary font-bold hover:underline" href="#">Contact Administrator</a>
+</p>
+</div>
+</div>
+</div>
+<!-- Footer Meta -->
+<div class="mt-8 flex justify-center gap-6 text-xs font-medium text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+</div>
+</body></html>
