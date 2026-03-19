@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leave Request - Titanium Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="size-8 flex items-center justify-center bg-primary text-white rounded-lg">
+<span class="material-symbols-outlined">shield_person</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight">Titanium Solutions</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Dashboard</a>
+<a class="text-primary text-sm font-semibold border-b-2 border-primary pb-1" href="#">My Leaves</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors text-sm font-medium" href="#">Team</a>
+</nav>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile picture showing a smiling professional man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCT-FW4ne107zouvNvmQZPNKTY_85-LbfcLtZFuA6rL05DIUPC0FlwPsgmwwQmnRhXU8Ydfj7Eb1scoozziURrCPfXsB0st2eCvG6kUBXJKbEtgreFKSexDK9Ex1T1CCu6kFm796ZpBwsAWnTotLj_Tr8W9OWfGblm0Xk6gbCwgqvu2mCZpFExkiFyYrDzEPl8HwhxSTM9S6IuxJAmhQXt69Zem4D2GmR2BTGC4XphTycU2jnMAeXylyZbCZH5OK0hHfH38gBDEtDI");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 px-4 md:px-0">
+<div class="layout-content-container flex flex-col max-w-[800px] flex-1">
+<!-- Header Section -->
+<div class="flex flex-col gap-2 mb-8 px-4">
+<h1 class="text-slate-900 dark:text-slate-100 text-3xl font-bold leading-tight">Leave Request Form</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base">Fill out the form below to submit your absence request for approval.</p>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 md:p-8">
+<form class="flex flex-col gap-6">
+<!-- Leave Type Row -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Leave Type</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-3.5 pr-10 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none">
+<option disabled="" selected="" value="">Select Leave Type</option>
+<option value="annual">Annual Leave (Vacation)</option>
+<option value="sick">Sick Leave</option>
+<option value="personal">Personal / Unpaid</option>
+<option value="parental">Parental Leave</option>
+<option value="bereavement">Bereavement</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+</div>
+</div><div class="flex items-center gap-3 py-2">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/20 dark:bg-slate-700 rounded-full peer dark:peer-focus:ring-primary/30 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+<span class="ml-3 text-sm font-semibold text-slate-700 dark:text-slate-300">Half Day</span>
+</label>
+</div>
+<!-- Date Range Selection -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Date</label>
+<div class="relative">
+<input class="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-3.5 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none" type="date" value="2024-01-01"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Session</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-3.5 pr-10 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none">
+<option value="am">Morning (AM)</option>
+<option value="pm">Afternoon (PM)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Duration Display (Auto-calculated UI) -->
+<div class="bg-primary/5 dark:bg-primary/10 border border-primary/20 rounded-lg p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Total Duration:</span>
+</div>
+<span class="text-primary font-bold text-lg">0.5 Days</span>
+</div>
+<!-- Reason Textarea -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Reason for Leave</label>
+<textarea class="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-3.5 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none resize-none" placeholder="Briefly explain the purpose of your leave..." rows="4"></textarea>
+</div>
+<!-- Attachment Upload -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Attachment (Optional)</label>
+<div class="border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-lg p-6 flex flex-col items-center justify-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-3xl text-slate-400 group-hover:text-primary transition-colors">upload_file</span>
+<p class="text-sm text-slate-500 dark:text-slate-400">Click to upload or drag and drop</p>
+<p class="text-xs text-slate-400 uppercase">PDF, PNG, JPG (Max 5MB)</p>
+<input class="hidden" id="file-upload" type="file"/>
+</div>
+</div>
+<!-- Form Actions -->
+<div class="flex items-center justify-end gap-4 mt-4 pt-6 border-t border-slate-100 dark:border-slate-800">
+<button class="px-6 py-2.5 rounded-lg font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" type="button">
+                                Cancel
+                            </button>
+<button class="bg-primary hover:bg-primary/90 text-white px-8 py-2.5 rounded-lg font-semibold shadow-md shadow-primary/20 transition-all flex items-center gap-2" type="submit">
+<span>Submit Request</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Leave Balances Preview -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 px-4">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Annual Leave</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-slate-100">18.5 <span class="text-sm font-normal text-slate-400">days</span></p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Sick Leave</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-slate-100">7.0 <span class="text-sm font-normal text-slate-400">days</span></p>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Used YTD</p>
+<p class="text-2xl font-bold text-slate-900 dark:text-slate-100">4.5 <span class="text-sm font-normal text-slate-400">days</span></p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="mt-auto py-8 text-center text-slate-500 dark:text-slate-600 text-xs">
+<p>© 2024 Titanium Solutions. All human resources policies apply.</p>
+</footer>
+</div>
+</div>
+</body></html>
