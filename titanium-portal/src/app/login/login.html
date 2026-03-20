@@ -1,0 +1,98 @@
+<div class="login-container">
+  <!-- Background Decoration -->
+  <div class="background-decoration">
+    <div class="blob blob-top-left"></div>
+    <div class="blob blob-bottom-right"></div>
+  </div>
+
+  <div class="login-content">
+    <!-- Brand Identity -->
+    <div class="brand-header">
+      <div class="brand-logo">
+        <img src="logo.png" alt="Titanium Solutions Logo" class="logo-image"/>
+        <h1 class="brand-name">Titanium Solutions</h1>
+      </div>
+    </div>
+
+    <!-- Login Card -->
+    <mat-card class="login-card">
+      <!-- Visual Header -->
+      <div class="card-header-image"></div>
+
+      <mat-card-content class="card-content">
+        <div class="welcome-section">
+          <h2 class="welcome-title">Welcome back</h2>
+          <p class="welcome-subtitle">Enter your credentials to access your dashboard.</p>
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+          <!-- Email Field -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email Address</mat-label>
+            <input 
+              matInput 
+              type="email" 
+              formControlName="email"
+              placeholder="name@titaniumsolutions.com">
+            <mat-icon matPrefix>mail</mat-icon>
+            <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+              Email is required
+            </mat-error>
+            <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+              Please enter a valid email
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Password Field -->
+          <div class="password-field-container">
+            <div class="password-label-row">
+              <span class="password-label">Password</span>
+              <a href="#" class="forgot-password-link">Forgot Password?</a>
+            </div>
+            <mat-form-field appearance="outline" class="full-width">
+              <input 
+                matInput 
+                [type]="hidePassword ? 'password' : 'text'"
+                formControlName="password"
+                placeholder="••••••••">
+              <mat-icon matPrefix>lock</mat-icon>
+              <button 
+                mat-icon-button 
+                matSuffix 
+                type="button"
+                (click)="togglePasswordVisibility()"
+                [attr.aria-label]="'Hide password'" 
+                [attr.aria-pressed]="hidePassword">
+                <mat-icon>{{hidePassword ? 'visibility' : 'visibility_off'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+                Password is required
+              </mat-error>
+              <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
+                Password must be at least 6 characters
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <!-- Remember Me -->
+          <mat-checkbox formControlName="remember" class="remember-checkbox">
+            Remember this device
+          </mat-checkbox>
+
+          <!-- Sign In Button -->
+          <button 
+            mat-raised-button 
+            color="primary" 
+            type="submit"
+            class="submit-button"
+            [disabled]="loginForm.invalid">
+            Sign In to Account
+          </button>
+        </form>
+
+        
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>
