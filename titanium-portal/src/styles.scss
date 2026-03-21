@@ -19,3 +19,28 @@ body {
     background-color: #101922;
   }
 }
+
+.flex{
+  display: flex;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+.item-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-row {
+  flex-direction: row;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap3{
+  gap: 0.75rem;
+}

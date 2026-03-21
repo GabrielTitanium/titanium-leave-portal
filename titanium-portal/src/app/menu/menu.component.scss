@@ -1,0 +1,18 @@
+mat-toolbar{
+    border-bottom: 1px solid #dbdbdb;
+    box-shadow: -1px 4px 2px -2px #efefef;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: white;;
+    .title-container{
+        align-items: center;
+        img{
+            width: 46px;
+            height: 46px;
+        }
+        span{
+            padding-left: 15px;
+        }
+    }
+}
+
