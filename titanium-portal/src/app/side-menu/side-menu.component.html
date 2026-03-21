@@ -1,1 +1,49 @@
-<p>side-menu.component works!</p>
+<mat-sidenav-container class="app-container">
+
+  <!-- SIDEBAR -->
+  <mat-sidenav mode="side" opened class="sidenav">
+
+    <!-- HEADER / LOGO -->
+    <div class="logo-section">
+      <mat-icon color="primary">corporate_fare</mat-icon>
+      <div class="text">
+        <div class="title">Employee Portal</div>
+        <div class="subtitle">Internal System</div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <mat-nav-list>
+
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+
+      <a mat-list-item routerLink="/leaves" routerLinkActive="active">
+        <mat-icon>calendar_today</mat-icon>
+        <span>Leave Requests</span>
+      </a>
+
+      <a mat-list-item routerLink="/attendance">
+        <mat-icon>schedule</mat-icon>
+        <span>Attendance</span>
+      </a>
+
+      <a mat-list-item routerLink="/payroll">
+        <mat-icon>payments</mat-icon>
+        <span>Payroll</span>
+      </a>
+
+      <mat-divider></mat-divider>
+
+      <a mat-list-item routerLink="/settings">
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </a>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+</mat-sidenav-container>

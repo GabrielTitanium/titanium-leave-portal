@@ -15,7 +15,6 @@ export class App {
    constructor(public router: Router) {}
 
   isLoginPage(): boolean {
-    console.log('Current URL:', this.router.url);
     return this.router.url === '/login';
   }
 }

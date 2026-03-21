@@ -1,2 +1,122 @@
+<div class="dashboard-header">
 
- I am Dashboard
+  <div>
+    <h1>Welcome back, {{userName}}</h1>
+    <p>Manage your leave and track upcoming time off.</p>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="requestLeave()">
+    <mat-icon>add</mat-icon>
+    Request Leave
+  </button>
+
+</div>
+
+<div class="card-grid">
+
+  <!-- Vacation -->
+  <mat-card>
+    <mat-card-header>
+      <mat-icon color="primary">beach_access</mat-icon>
+      <mat-card-title>Vacation</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <h2>14</h2>
+      <p>Days remaining</p>
+
+      <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Sick -->
+  <mat-card>
+    <mat-card-header>
+      <mat-icon color="accent">medical_services</mat-icon>
+      <mat-card-title>Sick Leave</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <h2>8</h2>
+      <p>Days remaining</p>
+
+      <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Personal -->
+  <mat-card>
+    <mat-card-header>
+      <mat-icon>person</mat-icon>
+      <mat-card-title>Personal</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <h2>3</h2>
+      <p>Days remaining</p>
+
+      <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Upcoming Leave</mat-card-title>
+    <button mat-button color="primary">View Calendar</button>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <mat-list>
+
+      <mat-list-item>
+        <mat-icon matListIcon>event</mat-icon>
+        <div matLine>Thanksgiving Break</div>
+        <div matLine>Vacation • 3 Days</div>
+
+        <mat-chip color="primary">Approved</mat-chip>
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon matListIcon>event</mat-icon>
+        <div matLine>Winter Holidays</div>
+        <div matLine>Vacation • 10 Days</div>
+
+        <mat-chip>Pending</mat-chip>
+      </mat-list-item>
+
+    </mat-list>
+
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Recent Activity</mat-card-title>
+
+  <mat-list>
+
+    <mat-list-item>
+      <mat-icon matListIcon color="primary">check_circle</mat-icon>
+      <div matLine>Leave Request Approved</div>
+      <div matLine>Nov 24 - Nov 27 • Vacation</div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-icon matListIcon>send</mat-icon>
+      <div matLine>New Request Submitted</div>
+      <div matLine>Dec 20 - Jan 03 • Winter Leave</div>
+    </mat-list-item>
+
+    <mat-list-item>
+      <mat-icon matListIcon>edit</mat-icon>
+      <div matLine>Profile Updated</div>
+      <div matLine>Personal contact info</div>
+    </mat-list-item>
+
+  </mat-list>
+
+  <button mat-button fullWidth>View All Activity</button>
+
+</mat-card>
