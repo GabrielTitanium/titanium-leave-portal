@@ -27,6 +27,9 @@ body {
 .flex-column{
   flex-direction: column;
 }
+.flex-row {
+  flex-direction: row;
+}
 .item-center {
   display: flex;
   justify-content: center;

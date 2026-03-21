@@ -1,0 +1,17 @@
+.layout{
+    height: calc(100% - 64px);
+}
+app-side-menu{
+    width: 262px;
+    background-color: white;
+    height: 100%;
+    padding: 24px 18px;
+}
+.main-content{
+    flex: 1;
+    height: 100%;
+    padding: 48px 40px;
+}
+router-outlet{
+    
+}
