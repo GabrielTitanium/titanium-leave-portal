@@ -1,0 +1,98 @@
+<div class="page-header">
+  <h1>Leave Request Form</h1>
+  <p>Fill out the form below to submit your absence request for approval.</p>
+</div>
+
+<mat-card>
+
+  <form class="form">
+
+    <!-- Leave Type -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Leave Type</mat-label>
+      <mat-select>
+        <mat-option value="annual">Annual Leave (Vacation)</mat-option>
+        <mat-option value="sick">Sick Leave</mat-option>
+        <mat-option value="personal">Personal / Unpaid</mat-option>
+        <mat-option value="parental">Parental Leave</mat-option>
+        <mat-option value="bereavement">Bereavement</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Half Day -->
+    <mat-slide-toggle>Half Day</mat-slide-toggle>
+
+    <!-- Date + Session -->
+    <div class="row">
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Session</mat-label>
+        <mat-select>
+          <mat-option value="am">Morning (AM)</mat-option>
+          <mat-option value="pm">Afternoon (PM)</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+
+    <!-- Duration -->
+    <mat-card class="duration-card">
+      <div class="duration-content">
+        <mat-icon color="primary">calendar_month</mat-icon>
+        <span>Total Duration:</span>
+        <strong>0.5 Days</strong>
+      </div>
+    </mat-card>
+
+    <!-- Reason -->
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Reason for Leave</mat-label>
+      <textarea matInput rows="4"></textarea>
+    </mat-form-field>
+
+    <!-- File Upload -->
+    <div class="upload-box">
+      <mat-icon>upload_file</mat-icon>
+      <p>Click to upload or drag and drop</p>
+      <input type="file">
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button mat-button type="button">Cancel</button>
+      <button mat-raised-button color="primary" type="submit">
+        Submit Request
+        <mat-icon>send</mat-icon>
+      </button>
+    </div>
+
+  </form>
+
+</mat-card>
+
+<div class="balance-grid">
+
+  <mat-card>
+    <p class="label">Annual Leave</p>
+    <h2>18.5 <span>days</span></h2>
+  </mat-card>
+
+  <mat-card>
+    <p class="label">Sick Leave</p>
+    <h2>7.0 <span>days</span></h2>
+  </mat-card>
+
+  <mat-card>
+    <p class="label">Total Used YTD</p>
+    <h2>4.5 <span>days</span></h2>
+  </mat-card>
+
+</div>
+
